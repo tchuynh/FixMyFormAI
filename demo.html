@@ -31,16 +31,17 @@
       letter-spacing: -1px;
     }
     .video-wrapper {
-      margin: 32px 0 24px 0;
-      display: flex;
-      justify-content: center;
+    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Hides any extra space */
     }
     video {
-      border-radius: 10px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.08);
-      width: 100%;           /* Fill the container */
-      height: auto;          /* Maintain aspect ratio */
-      max-height: 800px;     /* Larger height */
+    display: block;             /* Remove inline gaps */
+    width: 100%;               /* Full container width */
+    height: auto;              /* Maintain aspect ratio */
+    object-fit: cover;         /* Fill aspect box without letterboxing */
+    box-sizing: content-box;   /* Excludes border/padding */
     }
     .feedback-box {
       padding: 24px;
@@ -68,7 +69,7 @@
   <div class="container">
     <h1>Demo: Automated Sports Video Analysis</h1>
     <div class="video-wrapper">
-      <video src="demo_combined_vertical.mp4" autoplay loop muted playsinline controls></video>
+      <video src="demo_combined_horizontal.mp4" autoplay loop muted playsinline controls></video>
     </div>
     <div class="feedback-box">
         <strong>AI Feedback</strong><br><br>
