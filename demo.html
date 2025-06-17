@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,33 +12,51 @@
       margin: 0;
       padding: 0;
     }
+    header {
+      background-color: #2366b7;
+      color: white;
+      padding: 16px 32px;
+    }
+    nav a {
+      color: white;
+      margin-right: 24px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .container {
-      max-width: 1200px; /* Increased width */
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 24px auto;
       background: #fff;
       border-radius: 14px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-      padding: 40px 32px;
+      padding: 32px;
     }
     h1 {
       color: #2366b7;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      margin-bottom: 16px;
-      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .demo-section {
+      display: flex;
+      flex-direction: column; /* Stack vertically */
+      gap: 24px;
+      align-items: center;
     }
     .video-wrapper {
-    margin: 32px 0;
-    display: flex;
-    justify-content: center;
-    overflow: hidden; /* Hides any extra space */
+      width: 100%;
+      overflow: hidden;
     }
     video {
-    display: block;             /* Remove inline gaps */
-    width: 100%;               /* Full container width */
-    height: auto;              /* Maintain aspect ratio */
-    object-fit: cover;         /* Fill aspect box without letterboxing */
-    box-sizing: content-box;   /* Excludes border/padding */
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.08);
     }
     .feedback-box {
       padding: 24px;
@@ -49,51 +64,56 @@
       border-radius: 10px;
       background-color: #f9f9ff;
       color: #333;
-      font-size: 1.1rem;
+      font-size: 1rem;
       white-space: pre-wrap;
-      line-height: 1.7;
-      margin-top: 24px;
-    }
-    @media (max-width: 900px) {
-      .container {
-        max-width: 95%;
-        padding: 20px 10px;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
+      line-height: 1.6;
+      width: 100%;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="insights.html">Insights</a>
+      <a href="services.html">Services</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="demo.html">Demo</a>
+    </nav>
+  </header>
+
   <div class="container">
     <h1>Demo: Automated Sports Video Analysis</h1>
-    <div class="video-wrapper">
-      <video src="demo_combined_horizontal.mp4" autoplay loop muted playsinline controls></video>
-    </div>
-    <div class="feedback-box">
+    <div class="demo-section">
+      <div class="video-wrapper">
+        <video src="demo_combined_horizontal.mp4" autoplay loop muted playsinline controls></video>
+      </div>
+      <div class="feedback-box">
         <strong>AI Feedback</strong><br><br>
         Based on the images you provided, here is an evaluation of your squat form using the visible keypoints:<br><br>
         1. <b>Starting Position (Images 1-3):</b><br>
-           - You are standing upright with your feet about shoulder-width apart, which is a good stance.<br>
-           - Your posture appears neutral, but it is difficult to observe the spine alignment precisely from this frontal view.<br><br>
+        - You are standing upright with your feet about shoulder-width apart, which is a good stance.<br>
+        - Your posture appears neutral, but it is difficult to observe the spine alignment precisely from this frontal view.<br><br>
         2. <b>Descent into Squat (Images 4-6):</b><br>
-           - The hips are moving backward and knees are bending, which aligns with a proper squat.<br>
-           - Your knees remain in line with your feet and do not seem to collapse inward, which is good for knee health.<br>
-           - It looks like your knees might be slightly moving forward beyond your toes, which is generally acceptable within reason but should be controlled.<br>
-           - Ensure you keep your chest up and maintain a neutral spine throughout the movement to avoid leaning too far forward or rounding the back.<br><br>
+        - The hips are moving backward and knees are bending, which aligns with a proper squat.<br>
+        - Your knees remain in line with your feet and do not seem to collapse inward, which is good for knee health.<br>
+        - It looks like your knees might be slightly moving forward beyond your toes, which is generally acceptable within reason but should be controlled.<br>
+        - Ensure you keep your chest up and maintain a neutral spine throughout the movement to avoid leaning too far forward or rounding the back.<br><br>
         3. <b>Bottom of Squat (Images 7-9):</b><br>
-           - Your thighs look parallel to the floor or slightly below, which indicates good squat depth.<br>
-           - Your heels appear flat on the floor, which is important for stability.<br>
-           - Make sure your weight stays evenly distributed on the mid-foot to heel, avoiding shifting too far to the toes.<br><br>
+        - Your thighs look parallel to the floor or slightly below, which indicates good squat depth.<br>
+        - Your heels appear flat on the floor, which is important for stability.<br>
+        - Make sure your weight stays evenly distributed on the mid‑foot to heel, avoiding shifting too far to the toes.<br><br>
         <b>General Recommendations:</b><br>
-        - To further refine the assessment, a side view video or photo would be very helpful for evaluating depth, back angle, and ankle mobility.<br>
+        - To further refine the assessment, a side‑view video or photo would be very helpful for evaluating depth, back angle, and ankle mobility.<br>
         - Keep your core braced to protect your lower back.<br>
         - If you experience any discomfort in knees or back, consider working on mobility or consulting a professional trainer or physical therapist for personalized guidance.<br><br>
         Overall, your squat form looks quite solid from the frontal perspective you've provided. Keep focusing on maintaining good posture, knee alignment, and controlled movements throughout the squat.
+      </div>
     </div>
   </div>
+
 </body>
 </html>
-
-
